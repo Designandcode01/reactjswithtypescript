@@ -1,0 +1,200 @@
+.doctor-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  margin: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover .doctor-image {
+  transform: scale(1.05);
+}
+
+.availability-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.availability-badge {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.availability-badge:contains('Unavailable') {
+  background-color: #f44336;
+}
+
+.availability-badge:contains('Busy') {
+  background-color: #ff9800;
+}
+
+.doctor-info {
+  padding: 20px;
+}
+
+.doctor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.doctor-specialization {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+}
+
+.doctor-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.detail-label {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.doctor-rating {
+  margin: 16px 0;
+}
+
+.doctor-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.rating-text {
+  margin-left: 8px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.doctor-languages {
+  margin: 16px 0;
+}
+
+.languages-label {
+  display: block;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.language-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.language-tag {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.doctor-contact {
+  margin: 16px 0;
+  border-top: 1px solid #ecf0f1;
+  padding-top: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.contact-icon {
+  font-size: 1rem;
+}
+
+.book-appointment-btn {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.book-appointment-btn:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.book-appointment-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctor-card {
+    margin: 12px;
+    max-width: 100%;
+  }
+  
+  .doctor-info {
+    padding: 16px;
+  }
+  
+  .doctor-name {
+    font-size: 1.3rem;
+  }
+}

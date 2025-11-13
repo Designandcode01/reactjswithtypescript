@@ -40,3 +40,62 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+.App {
+  text-align: center;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.App-header {
+  margin-bottom: 40px;
+}
+
+.App-header h1 {
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+}
+
+.App-header p {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.doctors-container {
+  display: flex;
+  justify-content: center;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App {
+    padding: 16px;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  .App-header h3 {
+    color: #2c3e50;
+    font-size: 2rem;
+  }
+  
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
